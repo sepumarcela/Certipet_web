@@ -1,0 +1,51 @@
+CERTIPET - LANDING PAGE
+=======================
+
+REQUISITOS
+- Visual Studio Code (o cualquier editor de texto).
+- Un navegador web actualizado.
+- No necesitas instalar Java ni Node.js: este proyecto está hecho con HTML, CSS y JavaScript puro.
+
+CÓMO ABRIR
+1. Descomprime certipet-landing.zip.
+2. Abre Visual Studio Code.
+3. Selecciona Archivo > Abrir carpeta y elige la carpeta certipet-landing.
+4. Abre index.html en el navegador. Recomendado: instala la extensión Live Server en VS Code,
+   haz clic derecho sobre index.html y selecciona "Open with Live Server".
+
+FOTOGRAFÍAS
+Dentro de assets coloca tus fotografías originales con estos nombres:
+- portada-mascotas.jpg  (fotografía panorámica de ustedes y las mascotas)
+- mascota-premium.jpg  (foto de una de tus mascotas)
+- mascota-vip.jpg      (foto de otra mascota)
+- gato-veterinario.jpg (foto relacionada con atención veterinaria)
+- foto-psicologa.jpg   (foto profesional tuya)
+
+El archivo logo-certipet.png es el logo que compartiste. Se usa sin redibujarlo.
+Si tus fotos están en PNG, puedes conservarlas en PNG y cambiar la extensión en index.html.
+
+DATOS Y ENLACES
+- WhatsApp: 313 687 6556 (en formato internacional 573136876556).
+- Instagram: @certi_pet.
+- Ciudad: Medellín, Antioquia.
+
+EDITAR CONTENIDO
+- Textos, secciones y enlaces: index.html.
+- Colores, tamaños, tipografías y diseño: styles.css.
+- Menú móvil, acordeón de preguntas y año del pie de página: script.js.
+
+IMPORTANTE SOBRE LOS SERVICIOS
+- Premium: el cliente elige una sola de las tres opciones.
+- VIP: contempla las tres opciones descritas.
+- La expedición del certificado de apoyo emocional está sujeta a evaluación profesional.
+- No se garantiza aceptación universal por aerolíneas, transportadores o establecimientos.
+- La certificación de salud veterinaria debe ser expedida por un médico veterinario.
+- El curso realizado con COLPSIC se presenta como formación, no como aval institucional de cada certificado.
+
+PROMOCIÓN
+La sección navideña está configurada con el 10 % de descuento para certificados expedidos entre
+el 6 y el 16 de noviembre de 2026. Después de esa fecha, actualiza o elimina esa sección.
+
+PUBLICACIÓN
+Este proyecto todavía no está publicado. Para ponerlo en internet puedes usar un servicio de hosting
+estático como GitHub Pages, Netlify o Vercel. El dominio se conecta desde la configuración del hosting.
