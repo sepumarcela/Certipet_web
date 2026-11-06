@@ -5,7 +5,7 @@
 
 // 1. CONEXIÓN CON SUPABASE
 const SUPABASE_URL = "https://csuavczbqbrkpibiwqkj.supabase.co";
-const SUPABASE_ANON_KEY = "PEGA_AQUI_TU_CLAVE_PUBLICABLE";
+const SUPABASE_ANON_KEY = "sb_publishable_PWSpNsjutHF_7k5vIRe4Fw_aCDeoi3c";
 
 const supabaseClient = window.supabase.createClient(
     SUPABASE_URL,
@@ -19,6 +19,8 @@ const adminSection = document.getElementById("admin-section");
 
 const loginForm = document.getElementById("login-form");
 const loginMessage = document.getElementById("login-message");
+const forgotPasswordButton = document.getElementById("forgot-password-button");
+const forgotPasswordMessage = document.getElementById("forgot-password-message");
 const logoutButton = document.getElementById("logout-button");
 
 const recoveryForm = document.getElementById("recovery-form");
@@ -53,6 +55,43 @@ function showRecoveryForm() {
     adminSection.hidden = true;
     recoverySection.hidden = false;
 }
+// ENVIAR CORREO PARA RECUPERAR CONTRASEÑA
+forgotPasswordButton.addEventListener("click", async () => {
+    const email = document.getElementById("email").value.trim();
+
+    if (!email) {
+        showMessage(
+            forgotPasswordMessage,
+            "Primero escribe tu correo electrónico.",
+            true
+        );
+        return;
+    }
+
+    forgotPasswordButton.disabled = true;
+    showMessage(forgotPasswordMessage, "Enviando correo...");
+
+    const { error } = await supabaseClient.auth.resetPasswordForEmail(email, {
+        redirectTo: "https://certipetweb-sepia.vercel.app/admin/"
+    });
+
+    forgotPasswordButton.disabled = false;
+
+    if (error) {
+        showMessage(
+            forgotPasswordMessage,
+            "No se pudo enviar el correo. Inténtalo nuevamente.",
+            true
+        );
+        console.error(error);
+        return;
+    }
+
+    showMessage(
+        forgotPasswordMessage,
+        "Te enviamos un correo para recuperar tu contraseña. Revisa tu bandeja de entrada."
+    );
+});
 
 // 7. INICIAR SESIÓN
 loginForm.addEventListener("submit", async (event) => {

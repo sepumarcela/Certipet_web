@@ -35,7 +35,14 @@
 
                 <button type="submit" id="login-button">
                     Iniciar sesión
+                </button>   
+
+                <button type="button" id="forgot-password-button" class="forgot-password">
+                    ¿Olvidaste tu contraseña?
                 </button>
+
+                <p id="forgot-password-message" class="message" role="status"></p>
+
 
                 <p id="login-message" class="message" role="status"></p>
 
@@ -51,50 +58,34 @@
 
 
     <!-- PANEL ADMINISTRATIVO -->
-     
-<!-- RECUPERACIÓN DE CONTRASEÑA -->
-<section id="recovery-section" class="login-section" hidden>
-    <div class="login-card">
-        <img
-            src="../assets/logo-certipet.png"
-            alt="Logo original de CertiPet"
-            class="login-logo"
-        >
 
-        <h1>Crear nueva contraseña</h1>
+    <!-- RECUPERACIÓN DE CONTRASEÑA -->
+    <section id="recovery-section" class="login-section" hidden>
+        <div class="login-card">
+            <img src="../assets/logo-certipet.png" alt="Logo original de CertiPet" class="login-logo">
 
-        <p>Establece una nueva contraseña para tu cuenta administradora.</p>
+            <h1>Crear nueva contraseña</h1>
 
-        <form id="recovery-form">
-            <label for="new-password">Nueva contraseña</label>
-            <input
-                type="password"
-                id="new-password"
-                placeholder="Escribe tu nueva contraseña"
-                autocomplete="new-password"
-                minlength="8"
-                required
-            >
+            <p>Establece una nueva contraseña para tu cuenta administradora.</p>
 
-            <label for="confirm-password">Confirmar contraseña</label>
-            <input
-                type="password"
-                id="confirm-password"
-                placeholder="Repite tu nueva contraseña"
-                autocomplete="new-password"
-                minlength="8"
-                required
-            >
+            <form id="recovery-form">
+                <label for="new-password">Nueva contraseña</label>
+                <input type="password" id="new-password" placeholder="Escribe tu nueva contraseña"
+                    autocomplete="new-password" minlength="8" required>
 
-            <button type="submit" id="recovery-button">
-                Guardar nueva contraseña
-            </button>
+                <label for="confirm-password">Confirmar contraseña</label>
+                <input type="password" id="confirm-password" placeholder="Repite tu nueva contraseña"
+                    autocomplete="new-password" minlength="8" required>
 
-            <p id="recovery-message" class="message" role="status"></p>
-        </form>
-    </div>
-</section>
-<!-- FIN DE RECUPERACIÓN -->
+                <button type="submit" id="recovery-button">
+                    Guardar nueva contraseña
+                </button>
+
+                <p id="recovery-message" class="message" role="status"></p>
+            </form>
+        </div>
+    </section>
+    <!-- FIN DE RECUPERACIÓN -->
 
     <main id="admin-section" class="admin-section" hidden>
 
